@@ -14,7 +14,7 @@ class RopaHombre(Prenda):
 
     def mostrar_info(self):
         super().mostrar_info()
-        print(f"Talla: {self.talla}")
+        print(f"Nombre: {self.nombre}, Precio: ${self.precio}, Cantidad: {self.cantidad}, Talla: {self.talla}")
 
 class RopaMujer(Prenda):
     def __init__(self, nombre, precio, cantidad, talla):
@@ -23,7 +23,7 @@ class RopaMujer(Prenda):
 
     def mostrar_info(self):
         super().mostrar_info()
-        print(f"Talla: {self.talla}")
+        print(f"Nombre: {self.nombre}, Precio: ${self.precio}, Cantidad: {self.cantidad}, Talla: {self.talla}")
 
 class Inventario:
     def __init__(self):
@@ -32,7 +32,8 @@ class Inventario:
     def agregar_prenda(self, prenda):
         self.prendas.append(prenda) 
     def mostrar_inventario(self):
-        
+
         print("Inventario de Prendas:")
         for prenda in self.prendas:
             prenda.mostrar_info()  
+
